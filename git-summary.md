@@ -60,3 +60,36 @@ Cara mengetahui configurasi git
 		git merge namacabang
 	e. menghapus cabang 
 		git branch -d namacabang
+8. perbedaan checkout, reset, revert
+a. git checkout, untuk mengembalikan kondisi file ke waktu yang di tuju
+contoh : git checkout nomorcommit
+b. git reset, untuk menghapus perubahan
+memiliki tiga argumen 
+- --soft akan mngembalikan ke dalam kondisi stagged
+- --mixed kembali ke kondisi modified
+- --hard kembali ke kondisi commited
+contoh : git reset –soft nomorcommit
+c. git revert untuk mengembalikan perubahan
+
+*kesimpulan
+- perintah git checkout 
+mengembalikan file dalam kondisi sebelumnya, tapi bersifat sementara.
+- perintah git reset, akan mengembalikan file ke kondisi sebelumnya, kemudian menghapus catatan sejarah commit.
+
+9.Bekerja dengan remote repository
+a. menambahkan remote
+git remote add link repository
+b. melihat remote yang sudah di tambahkan
+git remote/ git remote -v
+c. mengubah nama remote
+git remote rename namanamabaru
+d. menghapus remote
+git remote remove namaremote
+e. mengirim revisi ke remote repository
+git push namaremote
+f. mengambil revisi dari remote repository
+-git fetch(hanya akan mengambil revisi)
+ git fetch namaremote nama branch
+-git pull(mengambil revisi dan alngsung merge terhadap repository lokal)
+10. Clone remote repository
+-git clone url repository
