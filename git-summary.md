@@ -25,3 +25,38 @@ Cara mengetahui configurasi git
 		git log nama_file
 	e. log yang dilakukan author tertentu
 		git log --author='nama_author'
+5. Melihat perbandingan revisi
+	a. melihat perbandingan pada file tertentu
+		git diff namafile
+	b. melihat perbandingan antar revisi/commit
+		git diff nomerrevisi1 nomorrevisi2
+	c. melihat perbandingan antar cabang
+		git diff namacabang1 nama cabang2
+6. Membatalkan perubahan 
+	a. jika kondisi sedang modified
+		git checkout namafile
+	b. jika kondisi sudah dalam keadaaan staged/ sudah di add
+		- kita harus mengubahnya ke dalam kondisi modified
+			git reset namafile
+		-lalu jika sudah dalam keadaan modified kita batalkan
+			git checkout namafile
+	c. jika kondisi sudah commit
+		-kita kembalikan dulu kondisi file ke commit sebelumny
+			git checkout nomorcommitsebelumnya namafile
+		-lalu kita kembalikan dalam kondisi modified
+			git reset namafile
+	d. kembali ke 3 commit sebelumnya
+		git checkout HEAD~3 namafile
+	e. membatalkan semua perubahan yang ada
+		git revert -n nomorcommit
+7. Menggunakan percabangan
+	a. membuat cabang baru
+		git branch namacabang
+	b. melihat caban branch yang ada
+		git branch
+	c. berpindah cabang/branch
+		git checkout branchyangdituju
+	d. Menggabungkan cabang
+		git merge namacabang
+	e. menghapus cabang 
+		git branch -d namacabang
