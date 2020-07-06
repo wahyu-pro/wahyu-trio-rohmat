@@ -93,3 +93,9 @@ f. mengambil revisi dari remote repository
 -git pull(mengambil revisi dan alngsung merge terhadap repository lokal)
 10. Clone remote repository
 -git clone url repository
+11. git tag
+- Untuk menandai commit tertentu
+12. git rm
+-untuk menghapus file dari index dan directory
+13. git stash
+-untuk menyimpan perubahan yang tidak langsung di commit, namun hanya sementara.
